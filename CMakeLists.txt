@@ -10,3 +10,15 @@ set(CMAKE_CXX_EXTENSIONS OFF)
 add_executable(EncoderApp
     src/main.cpp
 )
+
+# Libraries
+add_library(utilities SHARED
+    src/utilities/parse_arguments.cpp
+)
+
+target_link_libraries(EncoderApp utilities)
+
+# Include Directories
+include_directories(
+    include
+)
