@@ -14,6 +14,7 @@ add_executable(EncoderApp
 # Libraries
 add_library(utilities SHARED
     src/utilities/parse_arguments.cpp
+    src/utilities/resolve_path.cpp
 )
 
 target_link_libraries(EncoderApp utilities)
